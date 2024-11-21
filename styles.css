@@ -1,0 +1,26 @@
+/* Estilos personalizados para el blog */
+
+/* Estilo del encabezado */
+header {
+    background-color: #6c757d; /* Fondo gris oscuro */
+    color: white; /* Texto blanco */
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  /* Estilo para las publicaciones en vista lista */
+  .post {
+    background-color: #f8f9fa; /* Fondo claro */
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  /* Estilo para las publicaciones en vista tarjetas */
+  .post.card-view {
+    display: inline-block;
+    width: 30%; /* Ancho de cada tarjeta */
+    margin: 1%; /* Separación entre tarjetas */
+    vertical-align: top;
+  }
+  

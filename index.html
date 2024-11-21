@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Personal</title>
+  <!-- Enlace a Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Encabezado -->
+    <header class="text-center py-4">
+      <h1>Mi Blog Personal</h1>
+      <p class="lead">Historias, artículos y más...</p>
+    </header>
+
+    <!-- Barra de búsqueda -->
+    <section class="text-center py-3">
+      <input id="search" type="text" class="form-control w-50 mx-auto" placeholder="Buscar publicaciones">
+    </section>
+
+    <!-- Botones de alternancia de vistas -->
+    <div class="text-center mb-4">
+      <button id="view-list" class="btn btn-outline-primary">Vista Lista</button>
+      <button id="view-cards" class="btn btn-outline-secondary">Vista Tarjetas</button>
+      <!-- Botón para agregar artículo -->
+      <button id="add-article-btn" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addArticleModal">
+        Agregar Artículo
+      </button>
+    </div>
+
+    <!-- Contenedor de publicaciones -->
+    <section id="posts" class="row">
+      <article class="post col-12 mb-3">
+        <h3 class="post-title">Artículo 1</h3>
+        <p>Este es el contenido del primer artículo. Habla sobre temas interesantes.</p>
+      </article>
+      <article class="post col-12 mb-3">
+        <h3 class="post-title">Artículo 2</h3>
+        <p>Este es el contenido del segundo artículo. ¡No te lo pierdas!</p>
+      </article>
+    </section>
+  </div>
+
+  <!-- Modal para agregar artículo -->
+  <div class="modal fade" id="addArticleModal" tabindex="-1" aria-labelledby="addArticleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addArticleModalLabel">Agregar Nuevo Artículo</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <form id="add-article-form">
+            <div class="mb-3">
+              <label for="article-title" class="form-label">Título</label>
+              <input type="text" id="article-title" class="form-control" placeholder="Título del artículo">
+            </div>
+            <div class="mb-3">
+              <label for="article-content" class="form-label">Contenido</label>
+              <textarea id="article-content" class="form-control" rows="3" placeholder="Contenido del artículo"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Agregar Artículo</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Enlace a Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
